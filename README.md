@@ -14,13 +14,9 @@ Para la clase TDAHeap se crearon dos métodos principales: insert y delete, así
 
 Constructor: Se crea un nuevo objeto TDAHeap especificando la capacidad inicial del ArrayList que almacena los elementos del montículo.
 
-`
-
-public TDAHeap(int n) {
+`public TDAHeap(int n) {
         this.array = new ArrayList<>(n);
-}
-
-`
+}`
 
 getSize(): Devuelve el número de elementos actualmente almacenados en el montículo.
 
