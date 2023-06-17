@@ -7,6 +7,14 @@ public class TDAHeap<E extends Comparable<E>> {
         this.array = new ArrayList<>(n);
     }
 
+     public int getSize() {
+        return this.array.size();
+    }
+
+    public ArrayList<E> getArray() {
+        return this.array;
+    }
+
     public void insert(E data) {
         this.array.add(data);
         int i = this.array.size();
@@ -40,14 +48,6 @@ public class TDAHeap<E extends Comparable<E>> {
             return m;
         }
         return null;
-    }
-
-    public int getSize() {
-        return this.array.size();
-    }
-
-    public ArrayList<E> getArray() {
-        return this.array;
     }
 
     @Override

@@ -7,7 +7,11 @@ public class main {
         heap.insert(10);
         heap.insert(3);
         heap.insert(8);
-        heap.insert(1);
+        heap.insert(13);
+        heap.insert(7);
+        heap.insert(5);
+        heap.insert(19);
+
 
         System.out.println("TDAHeap:");
         System.out.println("Array: " + heap.getArray());
