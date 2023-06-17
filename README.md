@@ -40,14 +40,14 @@ insert(E data): Inserta un nuevo elemento en el montículo. El nuevo elemento se
 
 `
 public void insert(E data) {
-        this.array.add(data);
-        int i = this.array.size();
-        while (i > 1 && this.array.get(i - 1).compareTo(this.array.get(i / 2 - 1)) > 0) {
-            E temp = this.array.get(i - 1);
-            this.array.set(i - 1, this.array.get(i / 2 - 1));
-            this.array.set(i / 2 - 1, temp);
-            i /= 2;
-        }
+    this.array.add(data);
+    int i = this.array.size();
+    while (i > 1 && this.array.get(i - 1).compareTo(this.array.get(i / 2 - 1)) > 0) {
+        E temp = this.array.get(i - 1);
+        this.array.set(i - 1, this.array.get(i / 2 - 1));
+        this.array.set(i / 2 - 1, temp);
+        i /= 2;
+    }
 }
 `
 
