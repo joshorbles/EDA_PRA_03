@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 public class PriorityQueueHeap<E extends Comparable<E>> {
@@ -48,41 +47,17 @@ public class PriorityQueueHeap<E extends Comparable<E>> {
      public E front() {
         if (!isEmpty()) {
             return this.queue.getArray().get(0).getElement();
-=======
-package Practica3;
-
-import java.util.ArrayList;
-
-public class PriorityQueueHeap<E extends Comparable> {
-    
-    private TDAHeap<E> queue;
-    
-    public PriorityQueueHeap(int n) {
-        this.queue = new TDAHeap<>(n);
-    }
-    
-    public E deQueue() {
-        if(!this.isEmpty()) {
-            E elem = this.queue.delete();
-            return elem;
->>>>>>> 3123a80d819315ca8c336f558eb5d414d9901a13
         }
         return null;
     }
 
     public E back() {
-<<<<<<< HEAD
         if (!this.isEmpty()) {
             return this.queue.getArray().get(this.queue.getSize() - 1).getElement();
-=======
-        if( !this.isEmpty() ) {
-            return this.queue.getArray().get(this.queue.getSize() - 1);
->>>>>>> 3123a80d819315ca8c336f558eb5d414d9901a13
         }
         return null;
     }
 
-<<<<<<< HEAD
    
 
     
@@ -91,10 +66,3 @@ public class PriorityQueueHeap<E extends Comparable> {
 
    
 }
-=======
-    public boolean isEmpty() {
-        return this.queue.getSize() == 0;
-    }
-    
-}
->>>>>>> 3123a80d819315ca8c336f558eb5d414d9901a13
