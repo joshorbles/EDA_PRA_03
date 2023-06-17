@@ -22,6 +22,9 @@ public class main {
         myArray.delete();
 
         System.out.println(myArray);
+
+        PriorityQueueHeap<Integer> myQueue = new PriorityQueueHeap<>(5);
+        
         
     }
 }
