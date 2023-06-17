@@ -36,7 +36,8 @@ public ArrayList<E> getArray() {
 
 insert(E data): Inserta un nuevo elemento en el montículo. El nuevo elemento se agrega al final del ArrayList y luego se realiza un ajuste ascendente (up-heap) para mantener la propiedad del montículo.
 
-`public void insert(E data) {
+`
+public void insert(E data) {
     this.array.add(data);
     int i = this.array.size();
     while (i > 1 && this.array.get(i - 1).compareTo(this.array.get(i / 2 - 1)) > 0) {
@@ -45,7 +46,8 @@ insert(E data): Inserta un nuevo elemento en el montículo. El nuevo elemento se
         this.array.set(i / 2 - 1, temp);
         i /= 2;
     }
-}`
+}
+`
 
 delete(): Elimina y devuelve el elemento raíz del montículo. El elemento raíz se reemplaza por el último elemento del ArrayList y se realiza un ajuste descendente (down-heap) para restaurar la propiedad del montículo.
 
