@@ -22,11 +22,11 @@ Constructor: Se crea un nuevo objeto TDAHeap especificando la capacidad inicial 
 
 getSize(): Devuelve el número de elementos actualmente almacenados en el montículo.
 
-`
+'''
     public int getSize() {
         return this.array.size();
     }
-`
+'''
 
 getArray(): Devuelve una referencia al ArrayList que almacena los elementos del montículo (usado en la clase PriorityQueueheap para obtener elementos e insertarlos)
 
