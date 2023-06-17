@@ -15,31 +15,31 @@ Para la clase TDAHeap se crearon dos métodos principales: insert y delete, así
 Constructor: Se crea un nuevo objeto TDAHeap especificando la capacidad inicial del ArrayList que almacena los elementos del montículo.
 
 `
-    public TDAHeap(int n) {
+public TDAHeap(int n) {
         this.array = new ArrayList<>(n);
-    }
+}
 `
 
 getSize(): Devuelve el número de elementos actualmente almacenados en el montículo.
 
-'''
-    public int getSize() {
+`
+public int getSize() {
         return this.array.size();
-    }
-'''
+}
+`
 
 getArray(): Devuelve una referencia al ArrayList que almacena los elementos del montículo (usado en la clase PriorityQueueheap para obtener elementos e insertarlos)
 
 `
-    public ArrayList<E> getArray() {
+public ArrayList<E> getArray() {
         return this.array;
-    }
+}
 `
 
 insert(E data): Inserta un nuevo elemento en el montículo. El nuevo elemento se agrega al final del ArrayList y luego se realiza un ajuste ascendente (up-heap) para mantener la propiedad del montículo.
 
 `
-    public void insert(E data) {
+public void insert(E data) {
         this.array.add(data);
         int i = this.array.size();
         while (i > 1 && this.array.get(i - 1).compareTo(this.array.get(i / 2 - 1)) > 0) {
@@ -48,13 +48,13 @@ insert(E data): Inserta un nuevo elemento en el montículo. El nuevo elemento se
             this.array.set(i / 2 - 1, temp);
             i /= 2;
         }
-    }
+}
 `
 
 delete(): Elimina y devuelve el elemento raíz del montículo. El elemento raíz se reemplaza por el último elemento del ArrayList y se realiza un ajuste descendente (down-heap) para restaurar la propiedad del montículo.
 
 `
-    public E delete() {
+public E delete() {
         if (!this.array.isEmpty()) {
             int n = this.array.size();
             E m = this.array.get(0);
@@ -76,16 +76,16 @@ delete(): Elimina y devuelve el elemento raíz del montículo. El elemento raíz
             return m;
         }
         return null;
-    }
+}
 `
 
 toString(): Devuelve una representación en cadena del montículo, que es simplemente la representación en cadena del ArrayList.
 
 `
-    @Override
-    public String toString() {
-        return this.array.toString();
-    }
+@Override
+public String toString() {
+    return this.array.toString();
+}
 `
 
 Este heap es utilizado en la clase PriorityQueueHeap, ya que cada elemento estará ordenado según una prioridad
@@ -95,7 +95,7 @@ Este heap es utilizado en la clase PriorityQueueHeap, ya que cada elemento estar
 Para la resolución de esta parte se implementó una nueva clase utilizada por la clase de cola:
 
 `
-    private class PriorityQueueElement<T> implements Comparable<PriorityQueueElement<T>> {
+private class PriorityQueueElement<T> implements Comparable<PriorityQueueElement<T>> {
         private T element;
         private int priority;
 
@@ -115,8 +115,7 @@ Para la resolución de esta parte se implementó una nueva clase utilizada por l
         public T getElement() {
             return element;
         }
-    }
-
+}
 `
 
 El constructor PriorityQueueHeap(int n) crea una instancia de la clase TDAHeap con una capacidad inicial especificada por el parámetro n. El TDAHeap se utiliza como base para implementar la cola de prioridad.
